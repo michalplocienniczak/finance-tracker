@@ -1,6 +1,10 @@
 {
-  "name": "vite-reactts-tailwind-rtk-eslint",
+  "name": "finance-tracker",
   "version": "0.0.0",
+  "author": {
+    "name": "Michał Płócienniczak",
+    "url": "https://plocienniczak.com"
+  },
   "scripts": {
     "dev": " vite -- npx json-server db.json",
     "build": "tsc && vite build",
@@ -11,8 +15,6 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@reduxjs/toolkit": "^1.6.1",
-    "@testing-library/react": "^14.1.2",
-    "@testing-library/user-event": "^14.5.2",
     "@vitejs/plugin-react": "^3.0.0",
     "antd": "^5.13.2",
     "axios": "^1.6.5",
@@ -27,15 +29,9 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.21.3",
     "react-use": "^17.5.0",
-    "ts-node": "^10.9.2",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.23.8",
-    "@babel/preset-react": "^7.23.3",
-    "@babel/preset-typescript": "^7.23.3",
-    "@testing-library/jest-dom": "^6.2.1",
-    "@types/jest": "^29.5.11",
     "@types/lodash": "^4.14.202",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.9",
@@ -43,15 +39,11 @@
     "@typescript-eslint/parser": "^5.36.0",
     "@vitejs/plugin-react-refresh": "^1.3.1",
     "autoprefixer": "^10.4.0",
-    "babel-jest": "^29.7.0",
     "eslint": "^8.23.0",
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.5",
-    "ts-jest": "^29.1.2",
     "typescript": "^4.8.2",
     "vite": "^4.0.1"
   }
