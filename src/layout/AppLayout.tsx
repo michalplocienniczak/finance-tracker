@@ -59,20 +59,6 @@ export const AppLayout = ({ children }: React.PropsWithChildren) => {
       </Link>
     ),
     getItem(
-      <Link to="/expenses">Wydatki</Link>,
-      '2',
-      <Link to="/expenses">
-        <MoneyCollectOutlined rev={undefined} />
-      </Link>
-    ),
-    getItem(
-      <Link to="/users">Użytkownicy</Link>,
-      '3',
-      <Link to="/users">
-        <UserOutlined rev={undefined} />
-      </Link>
-    ),
-    getItem(
       <div onClick={() => logout()}>Wyloguj się</div>,
       '4',
       <div onClick={() => logout()}>
