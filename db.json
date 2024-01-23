@@ -1,0 +1,161 @@
+{
+  "expenses": [
+    {
+      "id": "1",
+      "description": "Rent",
+      "amount": 1000,
+      "date": "2017-01-01",
+      "userId": "1",
+      "tags": [
+        "housing",
+        "utilities"
+      ]
+    },
+    {
+      "id": "2",
+      "description": "Groceries",
+      "amount": 100,
+      "date": "2017-01-01",
+      "userId": "5dc9",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "3",
+      "description": "Gas",
+      "amount": 50,
+      "date": "2017-01-01",
+      "userId": "1",
+      "tags": [
+        "transportation"
+      ]
+    },
+    {
+      "id": "6",
+      "description": "Rent",
+      "amount": 1000,
+      "date": "2017-02-01",
+      "userId": "1",
+      "tags": [
+        "housing",
+        "utilities"
+      ]
+    },
+    {
+      "id": "7",
+      "description": "Groceries",
+      "amount": 101,
+      "date": "2024-01-30",
+      "userId": "5dc9",
+      "tags": [
+        "food",
+        "car",
+        "housing"
+      ]
+    },
+    {
+      "id": "8",
+      "description": "Gas",
+      "amount": 50,
+      "date": "2017-02-01",
+      "userId": "1",
+      "tags": [
+        "transportation"
+      ]
+    },
+    {
+      "id": "9",
+      "description": "Internet",
+      "amount": 50,
+      "date": "2017-02-01",
+      "userId": "5dc9",
+      "tags": [
+        "utilities"
+      ]
+    },
+    {
+      "id": "10",
+      "description": "Phone",
+      "amount": 50,
+      "date": "2017-02-01",
+      "userId": "1",
+      "tags": [
+        "utilities"
+      ]
+    },
+    {
+      "id": "11",
+      "description": "Rent",
+      "amount": 1000,
+      "date": "2017-03-01",
+      "userId": "1",
+      "tags": [
+        "housing",
+        "utilities"
+      ]
+    },
+    {
+      "id": "12",
+      "description": "Groceries",
+      "amount": 100,
+      "date": "2017-03-01",
+      "userId": "1",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "1b6e",
+      "description": "Test",
+      "amount": 10,
+      "date": "2024-01-31",
+      "tags": [
+        "Food",
+        "Cinema",
+        "Sth"
+      ],
+      "userId": "5dc9"
+    },
+    {
+      "id": "4eed",
+      "description": "Duży wydatek",
+      "amount": 1100,
+      "date": "2024-01-26",
+      "tags": [
+        "Car"
+      ],
+      "userId": "5dc9"
+    },
+    {
+      "id": "b1af",
+      "description": "Jakiś wydatek",
+      "amount": 190,
+      "date": "2024-01-23",
+      "tags": [
+        "Coś tam"
+      ],
+      "userId": "74a9"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "test@email.com",
+      "password": "123qwe"
+    },
+    {
+      "id": "5dc9",
+      "name": "Michal P",
+      "email": "michal@p.com",
+      "password": "123qweasd"
+    },
+    {
+      "id": "74a9",
+      "name": "Jan Kowalski",
+      "email": "kowal@email.com",
+      "password": "123qwe"
+    }
+  ]
+}
