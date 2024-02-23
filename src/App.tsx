@@ -9,6 +9,7 @@ import { SignUp } from './routes/SignUp'
 import { Dashboard } from './routes/Dashboard'
 import { NewExpense } from './routes/NewExpense'
 import { EditExpense } from './routes/EditExpense'
+import { Lists } from './routes/Lists'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,14 @@ const router = createBrowserRouter([
     element: (
       <AppLayout>
         <Dashboard />
+      </AppLayout>
+    ),
+  },
+  {
+    path: '/lists',
+    element: (
+      <AppLayout>
+        <Lists />
       </AppLayout>
     ),
   },

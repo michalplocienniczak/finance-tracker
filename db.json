@@ -136,6 +136,36 @@
         "Coś tam"
       ],
       "userId": "74a9"
+    },
+    {
+      "id": "d90d",
+      "description": "123",
+      "amount": 123,
+      "date": "2024-02-23",
+      "tags": [
+        "food"
+      ],
+      "userId": "5dc9"
+    },
+    {
+      "id": "07d7",
+      "description": "1231",
+      "amount": 12310,
+      "date": "2024-02-23",
+      "tags": [
+        "more food"
+      ],
+      "userId": "5dc9"
+    },
+    {
+      "id": "fad6",
+      "description": "więcej",
+      "amount": 444,
+      "date": "2024-02-23",
+      "tags": [
+        "money"
+      ],
+      "userId": "5dc9"
     }
   ],
   "users": [
