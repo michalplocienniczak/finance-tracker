@@ -54,9 +54,9 @@ export const SignUpForm = () => {
           })
           navigate('/signin')
         },
-        onError: (error: any) => {
+        onError: (error: string) => {
           notification.error({
-            message: error.message,
+            message: error,
           })
         },
       })

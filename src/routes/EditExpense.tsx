@@ -21,9 +21,9 @@ export const EditExpense = () => {
             console.log(response)
             setActiveExpense(response)
           },
-          onError: (error: any) => {
+          onError: (error: string) => {
             notification.error({
-              message: error.message,
+              message: error,
             })
             setTimeout(() => {
               navigate('/')

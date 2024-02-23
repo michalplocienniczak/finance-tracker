@@ -1,6 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { api } from '../../../api'
-import axios from 'axios'
+import { AxiosError } from 'axios'
+import { handleAxiosError } from '../../../utils'
 
 type PostUserPayload = {
   payload: {
@@ -9,7 +10,7 @@ type PostUserPayload = {
     password: string
   }
   onSuccess?: () => void
-  onError?: (error: any) => void
+  onError?: (error: string) => void
 }
 
 export const postUserAction = createAsyncThunk<undefined, PostUserPayload>(
@@ -19,14 +20,12 @@ export const postUserAction = createAsyncThunk<undefined, PostUserPayload>(
       await api.post<undefined>(`/users/`, payload)
 
       onSuccess?.()
-    } catch (error: any) {
-      onError?.(error)
+    } catch (error) {
+      const err = handleAxiosError(error as AxiosError)
 
-      return rejectWithValue(
-        axios.isAxiosError(error) && error.response
-          ? error.response.data
-          : { error }
-      )
+      onError?.(err)
+
+      return rejectWithValue(err)
     }
   }
 )

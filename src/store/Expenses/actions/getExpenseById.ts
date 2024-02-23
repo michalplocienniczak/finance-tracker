@@ -1,12 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { api } from '../../../api'
-import axios from 'axios'
+import { AxiosError } from 'axios'
 import { Expense } from '../../../types'
+import { handleAxiosError } from '../../../utils'
 
 type GetExpenseByIdPayload = {
   expenseId: string
   onSuccess?: (response: Expense) => void
-  onError?: (error: any) => void
+  onError?: (error: string) => void
 }
 
 export const getExpenseByIdAction = createAsyncThunk<
@@ -21,14 +22,12 @@ export const getExpenseByIdAction = createAsyncThunk<
       onSuccess?.(expense)
 
       return expense
-    } catch (error: any) {
-      onError?.(error)
+    } catch (error) {
+      const err = handleAxiosError(error as AxiosError)
 
-      return rejectWithValue(
-        axios.isAxiosError(error) && error.response
-          ? error.response.data
-          : { error }
-      )
+      onError?.(err)
+
+      return rejectWithValue(err)
     }
   }
 )

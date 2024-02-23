@@ -1,12 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { api } from '../../../api'
-import axios from 'axios'
+import { AxiosError } from 'axios'
 import { User } from '../../../types'
+import { handleAxiosError } from '../../../utils'
 
 type GetUserPayload = {
   userId: string
   onSuccess?: (response: User) => void
-  onError?: (error: any) => void
+  onError?: (error: string) => void
 }
 
 export const getUserAction = createAsyncThunk<User, GetUserPayload>(
@@ -18,14 +19,12 @@ export const getUserAction = createAsyncThunk<User, GetUserPayload>(
       onSuccess?.(user)
 
       return user
-    } catch (error: any) {
-      onError?.(error)
+    } catch (error) {
+      const err = handleAxiosError(error as AxiosError)
 
-      return rejectWithValue(
-        axios.isAxiosError(error) && error.response
-          ? error.response.data
-          : { error }
-      )
+      onError?.(err)
+
+      return rejectWithValue(err)
     }
   }
 )
